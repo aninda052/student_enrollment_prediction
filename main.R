@@ -60,7 +60,7 @@ low[i+45]=x-pred5$se[i]
 up[i+45]=x+pred5$se[i]
 cat("Prediction with Standard Error : ",low[i+45]," - ",up[i+45],"\n")}
 
-jpeg("prediction.jpeg")
+
 plot(true_value,ylim = c(0,350),xlim = c(0,55),xlab="Semester No",ylab="Student No",col="black")
 lines(true_value,col="blue")
 par(new=T)
@@ -68,7 +68,7 @@ plot(X,ylim = c(0,350),xlim = c(0,55),xlab="Semester No",ylab="Student No",col="
 lines(X,col="green")
 lines(low,col="red")
 lines(up,col="red")
-dev.off()
+
 }
 
 options(digits = 2)
